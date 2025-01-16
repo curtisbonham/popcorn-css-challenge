@@ -8,3 +8,10 @@ head{
   background-color: #FFDBAA
   text: #553100
 }
+//changing the main background
+body{
+  backgroud: #D4A76A
+}
+button{
+  button: #805215
+}
