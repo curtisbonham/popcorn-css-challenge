@@ -9,10 +9,13 @@ head {
   background-color: #FFDBAA;
   color: #553100;
 }
+h1{
+  color: #553100;
+}
 
 /* Changing the main background */
 body {
-  background-color: #D4A76A; 
+  background-color: #D4A76A;
 }
 
 /* Styling the button */
