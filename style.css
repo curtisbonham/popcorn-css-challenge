@@ -3,3 +3,37 @@ Header background - #FFDBAA
 button - #805215
 Header Text - #553100
 Main background - #D4A76A*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #D4A76A;
+
+}
+.header{
+  background-color: #FFDBAA;
+  color: #553100;
+  grid-column: span 5;
+  justify-content: space-around;
+}
+.header > .nav-button{
+  background-color: #805215;
+  color: white;
+  width: 90px;
+  height: 50px;
+}
+#home{
+  margin-left: auto;
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.box{
+  background-color: blue;
+  color: green;
+}
