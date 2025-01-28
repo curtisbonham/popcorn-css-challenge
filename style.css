@@ -15,10 +15,12 @@ body{
 }
 .container{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: minmax(300px, auto);
+  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
   column-gap: 50px;
-}
+  row-gap: 50px;
+  }
 .header{
   display:flex;
   background-color: #FFDBAA;
@@ -40,11 +42,16 @@ body{
 #home{
   margin-left: 950px;
 }
+#about{
+  grid-row-start: 3;
+  grid-column: span 3;
+}
 
 .box{
   background-color: white;
   color: black;
   justify-items: center;
+  border: black;
 
 }
 .box>.card-button{
@@ -54,4 +61,16 @@ body{
   height: 50px;
   padding: 10px;
   margin-bottom: 10px;
+}
+.card-button>#about{
+  background-color: #805215;
+  color: white;
+  width: 1000px;
+  height: 500px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#flight-box{
+  grid-column: 1/2
 }
