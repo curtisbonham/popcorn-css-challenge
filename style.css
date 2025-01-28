@@ -11,10 +11,12 @@ head {
 }
 h1{
   color: #553100;
+  ;
 }
 
 /* Changing the main background */
 body {
+  display: flex;
   background-color: #D4A76A;
 }
 
