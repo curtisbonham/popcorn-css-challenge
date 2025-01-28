@@ -5,38 +5,49 @@ Header Text - #553100
 Main background - #D4A76A*/
 
 
-*{
-  box-sizing: border-box;
-}
 /* Changing the header background color and text */
 head {
-  background-color: #FFDBAA;
+  background-color: blue;
   color: #553100;
+}
+.item-a{
+  grid-area: header;
+}
+.item-b{
+  grid-area: main;
 }
 
 /* Changing the main background */
-body {
-  background-color: #D4A76A;
+.grid {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+    background-color: green;
 }
 
 h1{
   color: #553100;
-  justify-self: flex-start;
 }
 .main-nav{
   width: 100%;
-  background-color: #FFDBAA;
+  background-color: red;
   font-size: 1.5em;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-
 }
-
 /* Styling the button */
 button {
   background-color: #805215;
   color: white;
   width: 90px;
   height: 50px;
+  align-self: center;
+}
+#home{
+  margin-left: auto;
+  align-self: center;
+}
+.main-nav > .nav-button{
+  background-color: black;
+  color: yellow;
 }
