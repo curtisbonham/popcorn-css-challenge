@@ -4,73 +4,109 @@ button - #805215
 Header Text - #553100
 Main background - #D4A76A*/
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body{
   background-color: #D4A76A;
+  margin: 0;
+  box-sizing: border-box;
 }
 .container{
   display: grid;
-  padding: 20px;
+  grid-template-areas:
+    "header header header"
+    "main-content main-content main-content";
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr 1fr;
-  column-gap: 50px;
-  row-gap: 50px;
-  }
+  grid-template-rows: auto 1fr auto;
+  min-height: 50vh;
+}
 .header{
-  display:flex;
+  grid-area: header;
   background-color: #FFDBAA;
   color: #553100;
-  grid-column: span 5;
-  height: 100px;
-  gap: 25px;
+  display:flex;
   align-items: center;
-  padding-left: 30px;
+  justify-content: space-between;
   text-transform: uppercase;
+  padding: 0 30px;
+  height: 100px;
+  border: 1px solid black;
 }
-.header > .nav-button{
+.header > div{
+  text-transform: uppercase;
+  color: #553100;
+  font-size: xx-large;
+  font-weight: bold;
+  padding: 40px;
+}
+nav{
+  display: flex;
+  gap: 25px;
+  margin-right: 50px;
+}
+.nav-button{
   background-color: #805215;
   color: white;
   width: 90px;
   height: 50px;
   text-transform: uppercase;
 }
-#home{
-  margin-left: 950px;
-}
-#about{
-  grid-row-start: 3;
-  grid-column: span 3;
-}
+.main-content{
+  grid-area: main-content;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #D4A76A;
+  padding: 20px;
+  margin-left: 50px;
+  margin: 0 50px 0;
 
-.box{
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+
+}
+.card{
   background-color: white;
   color: black;
-  justify-items: center;
-  border: black;
-
-}
-.box>.card-button{
-  background-color: #805215;
-  color: white;
+  display:grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
   width: 300px;
+  height: 200px;
+  box-shadow: 0 8px 12px 0 gray;
+}
+.card h2{
+  margin: 0;
+  padding: 0.5rem;
+  justify-self: center;
+}
+.card-button{
+  background-color: #805215;
+  color: white;
+  width: 85%;
   height: 50px;
+  justify-self: center;
   padding: 10px;
   margin-bottom: 10px;
 }
-.card-button>#about{
+#about-us{
+  justify-items: center;
+  background-color: white;
+  color: black;
+  grid-row-start: 3;
+  grid-column: span 3;
+  width: 100%;
+  height: 250px;
+  box-shadow: 0 8px 12px 0 gray;
+}
+#about-us > button {
   background-color: #805215;
   color: white;
-  width: 1000px;
-  height: 500px;
+  height: 50px;
+  width: 85%;
   padding: 10px;
   margin-bottom: 10px;
 }
 
-#flight-box{
-  grid-column: 1/2
-}
